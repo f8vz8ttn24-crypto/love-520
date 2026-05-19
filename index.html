@@ -38,9 +38,17 @@
       <p class="hero-date">2026年5月20日</p>
       <h1>琼宝，我爱你</h1>
       <p class="hero-sub">十八载风雨同行 · 从兰州到江南，再到蓉城<br />你在拉萨辛苦打拼，我的心一直陪着你</p>
-      <span class="scroll-hint">轻轻向下滑动</span>
+      <span class="scroll-hint">轻轻向下滑动 · 右下角可播放轻音乐</span>
     </div>
   </header>
+
+  <audio id="bg-music" loop preload="none">
+    <source src="audio/romantic.mp3" type="audio/mpeg" />
+  </audio>
+  <button type="button" class="music-btn" id="music-btn" aria-label="播放背景音乐" title="轻音乐">
+    <span class="music-icon" id="music-icon" aria-hidden="true">♪</span>
+    <span class="music-label" id="music-label">音乐</span>
+  </button>
 
   <main>
     <article class="letter reveal">

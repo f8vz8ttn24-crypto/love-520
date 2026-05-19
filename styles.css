@@ -281,6 +281,52 @@ main {
   font-size: 1.25rem;
 }
 
+.music-btn {
+  position: fixed;
+  right: 1rem;
+  bottom: 1.25rem;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.55rem 0.9rem;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--rose-deep);
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(225, 29, 72, 0.2);
+  backdrop-filter: blur(8px);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.music-btn:hover {
+  transform: scale(1.04);
+}
+
+.music-btn.is-playing {
+  background: var(--rose-soft);
+  animation: music-pulse 2s ease-in-out infinite;
+}
+
+.music-icon {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+@keyframes music-pulse {
+  0%,
+  100% {
+    box-shadow: 0 4px 20px rgba(225, 29, 72, 0.2);
+  }
+  50% {
+    box-shadow: 0 4px 24px rgba(225, 29, 72, 0.4);
+  }
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(16px);
